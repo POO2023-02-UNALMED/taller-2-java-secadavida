@@ -12,13 +12,14 @@ public class Auto {
 
 	int cantidadAsientos() {
 		int numeroAsientos = 0;
-		for (int i = 0; i < this.asientos.length(); i++) {
+		for (int i = 0; i < this.asientos.length; i++) {
 			if (this.asientos[i] instanceof Asiento) numeroAsientos++;
 		}
+		return numeroAsientos;
 	}
 
 	String verificarIntegridad() {
-		for (int i = 0; i < this.asientos.length(); i++) {
+		for (int i = 0; i < this.asientos.length; i++) {
 			if (this.asientos[i] == null) continue;
 			if (!(this.registro == this.motor.registro == this.asientos[i]))
 				return "Las piezas no son originales";
